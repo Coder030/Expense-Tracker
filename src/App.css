@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body{
+  background-color: #e7e4e4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+h2{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  top: 35px;
+}
+
+.card{
+  /* background-color: cyan; */
+  width: 560px;
+  height: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yb{
+  position: relative;
+  left: 89px;
+  top: 60px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.b{
+  position: relative;
+  left: 89px;
+  top: 50px;
+  font-size: 25px;
+  font-weight: 700;
+
+}
+
+.ioe1{
+  background-color: white;
+  position: relative;
+  top: 40px;
+  left: 90px;
+  width: 192.5px;
+  height: 90px;
+}
+.ioe2{
+  background-color: white;
+  position: relative;
+  top: -123.8px;
+  left: 192.5px;
+  width: 192.5px;
+  height: 90px;
+}
+
+.i{
+  position: relative;
+  left: 20px;
+  top: 19px;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.inc{
+  position: relative;
+  left: 19px;
+  top: 15px;
+  font-size: 18px;
+  font-weight: 800;
+  color: rgb(14, 197, 14);
+  margin: auto;
+}
+.e{
+  position: relative;
+  left: 15px;
+  top: 17px;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.exp{
+  position: relative;
+  left: 17px;
+  bottom: -13px;
+  font-size: 18px;
+  font-weight: 800;
+  color: red;
+  margin: auto;
+}
+.vl {
+  position: relative;
+  left: 185px;
+  bottom: 35px;
+  border-left: 2.5px solid #e6e4e4;
+  height: 50px;
+  border-radius: 2px;
+}
+
+.nt{
+  position: relative;
+  bottom: 100px;
+}s
+
+
+
+.nt{
+  font-weight: 700;
+}
+.hr1{
+  position: relative;
+  bottom: 110px;
+  border: none;
+  border-top: 1px solid #989595;
+}
+
+.incomeInp{
+  position: relative;
+  bottom: 110px;
+  text-indent: 8px;
+  margin-top: 10px;
+  height: 32px;
+  width: 385px;
+  font-family: 'Nanum Gothic', sans-serif;
+  border: 1px solid #e6e4e4;
+}
+
+.wayInp{
+  position: relative;
+  bottom: 110px;
+  text-indent: 8px;
+  margin-top: 10px;
+  height: 32px;
+  width: 385px;
+  font-family: 'Nanum Gothic', sans-serif;
+  border: 1px solid #e6e4e4;
+  margin-bottom: 15px;
+}
+
+.labelfi{
+  position: relative;
+  bottom: 110px;
+  font-weight: 700;
+}
+
+.add{
+  position: relative;
+  bottom: 90px;
+  height: 32px;
+  width: 385px;
+  background-color:  rgb(120, 42, 246);
+  color: white;
+  border: none;
+}
+
+.add:hover{
+  background-color: rgb(42, 141, 246);
+}
+
+.hist{
+  background-color: white;
+  margin-bottom: 20px;
+  width: 385px;
+  height: 32px;
+  position: relative;
+  margin: auto;
+  bottom: 110px;  
+}
+
+.ways{
+    position: relative;
+    left: 10px;
+    top: 6.5px; 
+}
+
+.ways2I{
+  position: relative;
+  left: 240px;
+  bottom: 27px;
+  color: rgb(14, 197, 14);
+}
+.ways2E{
+  position: relative;
+  left: 240px;
+  bottom: 27px;
+  color: red;
+}
+
+.ioe2I{
+  height: 31px;
+  width: 5px;
+  background-color: rgb(14, 197, 14);
+  position: relative;
+  left: 385px;
+  bottom: 67px;
+}
+.ioe2E{
+  height: 31px;
+  width: 5px;
+  background-color: red;
+  position: relative;
+  left: 385px;
+  bottom: 67px;
+}

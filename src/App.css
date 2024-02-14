@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 body{
-  background-color: #e7e4e4;
+  background-color: #f3efef;
   font-family: 'Nanum Gothic', sans-serif;
 }
 h2{
@@ -147,14 +147,18 @@ h2{
   position: relative;
   bottom: 90px;
   height: 32px;
-  width: 385px;
+  width: 392px;
   background-color:  rgb(120, 42, 246);
   color: white;
   border: none;
+  font-family: 'Courier New', Courier, monospace;
+  transition: width 1s, height 1s;
 }
 
 .add:hover{
-  background-color: rgb(42, 141, 246);
+  height: 40px;
+  background-color: rgb(149, 92, 241);
+
 }
 
 .hist{
@@ -164,7 +168,7 @@ h2{
   height: 32px;
   position: relative;
   margin: auto;
-  bottom: 110px;  
+  bottom: 90px;  
 }
 
 .ways{
@@ -201,4 +205,114 @@ h2{
   position: relative;
   left: 385px;
   bottom: 67px;
+}
+.nf_head {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.button2{
+  width: 392px;
+  height: 50px;
+  background-color:  rgb(120, 42, 246);
+  color: white;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  transition: width 1s, height 1s;
+  left: 50%;
+  margin-left: -196px; /* = -width / 2    */
+  position: fixed;
+}
+.button2:hover{
+  height: 70px;
+  background-color: rgb(149, 92, 241);
+}
+.fh{
+  height: 35px;
+  width: 30px;
+  background-color:  rgb(42, 127, 246);
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  transition: width 1s, height 1s;
+  left: 68%;
+  bottom: 640px;
+  margin-left: -15px; /* = -width / 2    */
+  position: fixed;
+}
+.histAmount{
+  position: relative;
+  height: 40px;
+  width: 450px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.pPos{
+  text-align: center;
+  color: rgb(1, 195, 1);
+}
+.pNeg{
+  text-align: center;
+  color: red;
+}
+.linePos{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  background-color: rgb(0, 225, 0);
+  height: 50px;
+}
+.lineNeg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  background-color: red;
+  height: 50px;
+}
+.profit{
+  color: rgb(1, 195, 1);
+}
+.butt{
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.navbar{
+  position: relative;
+  width: 40px;
+  background-color: white;
+  float: left;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+} 
+.home_icon{
+  color: rgb(21, 78, 248);
+}
+.history_icon{
+  color: rgb(21, 78, 248);
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

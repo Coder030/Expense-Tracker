@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { LuHistory } from "react-icons/lu";
+import { Link } from 'react-router-dom';
 
 function Main() {
   const [balance, setBalance] = useState(0.00)
@@ -6,7 +8,7 @@ function Main() {
   const [expenseS, setExpenseS] = useState(0.00)
   const [av, setAv] = useState(null)
   const [ev, setEv] = useState(null)
-  const [flag, setFlag] = useState(false)
+  const [, setFlag] = useState(false)
   const [damn, setDamn] = useState([])
   function check() {
     var input = document.getElementById("way")
@@ -24,8 +26,18 @@ function Main() {
 }
 
 
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault()
+    fetch("https://expense-backend-o8m0.onrender.com/", {
+        method: 'POST',
+        body: JSON.stringify({
+          expense: {
+            way: ev,
+            amount: av
+          }
+        }),
+        headers: {'Content-Type': 'application/json'},
+      })
     if(av === "" || ev === ""){
       alert("You gave an empty string")
       return
@@ -84,6 +96,7 @@ function Main() {
 
     
     
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [incomeS, expenseS])
   return (
     <div className='card'>
@@ -104,7 +117,7 @@ function Main() {
       <label className='labelfi' htmlFor="wayInp">Way of Transaction: </label>
       <br />
       <form>
-        <input  value={ev} placeholder='From where it came, or how it went?' type="text" className='wayInp' name="wayInp" onChange={(e) => setEv(e.target.value)} maxLength={35} id='way' onInput={check}/>
+        <input  value={ev} placeholder='From where it came, or how it went  ?' type="text" className='wayInp' name="wayInp" onChange={(e) => setEv(e.target.value)} maxLength={35} id='way' onInput={check}/>
         <br />
         <label className='labelfi' htmlFor="incomeInp">Amount: </label>
         <br />
@@ -118,11 +131,10 @@ function Main() {
         >Add new Transaction</button>
       </form>
       <br /><br />
-      <p className='nt'>History</p>
+      <p className='nt'>Recent History</p>
       <hr className="hr1" />
       <div className='ways2I'></div>
       </div>
-
     </div>
   )
   

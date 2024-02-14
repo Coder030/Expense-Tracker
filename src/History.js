@@ -19,8 +19,10 @@ function History() {
       try {
         const result = await fetchData();
         setData(result);
+        setLoading(false)
       } catch (error) {
         setError(error);
+        setLoading(false);
       } finally {
         setLoading(false);
       }
@@ -68,9 +70,10 @@ function History() {
           })}
         </div>
       )}
-     {!loading && sum>0 && <h2 className='profit'>The Profit is {sum}</h2> }
-     {!loading && sum<0 && <h2 className='loss'>The Loss is {sum}</h2> }
-     {!loading && sum===0 && <h2 className='nothing'>It is a break-even! Amount left is {sum}</h2> }
+      {data.length === 0 && !loading && <p style={{textAlign: 'center'}}>No transactions have taken place</p>}
+     {!loading && sum>0 && data.length!== 0 && <h2 className='profit'>The Profit is {sum}</h2> }
+     {!loading && sum<0 && data.length!== 0 && <h2 className='loss'>The Loss is {sum}</h2> }
+     {!loading && sum===0 && data.length!== 0 && <h2 className='nothing'>It is a break-even! Amount left is {sum}</h2> }
     </div>
   );
 }

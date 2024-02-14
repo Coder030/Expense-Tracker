@@ -27,16 +27,6 @@ function Main() {
 
   const handleClick = async (e) => {
     e.preventDefault()
-    fetch("https://expense-backend-o8m0.onrender.com/", {
-        method: 'POST',
-        body: JSON.stringify({
-          expense: {
-            way: ev,
-            amount: av
-          }
-        }),
-        headers: {'Content-Type': 'application/json'},
-      })
     if(av === "" || ev === ""){
       alert("You gave an empty string")
       return
@@ -51,6 +41,16 @@ function Main() {
       setFlag(false)
       setExpenseS(expenseS + Math.abs(av))
     }
+    fetch("https://expense-backend-o8m0.onrender.com/", {
+        method: 'POST',
+        body: JSON.stringify({
+          expense: {
+            way: ev,
+            amount: av
+          }
+        }),
+        headers: {'Content-Type': 'application/json'},
+      })
 
     var history = document.createElement("div");
     history.classList.add("hist")

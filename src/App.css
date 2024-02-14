@@ -152,7 +152,7 @@ h2{
   color: white;
   border: none;
   font-family: 'Courier New', Courier, monospace;
-  transition: width 1s, height 1s;
+  transition: width 1s, height .3s;
 }
 
 .add:hover{

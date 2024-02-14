@@ -44,7 +44,7 @@ function History() {
 
   return (
     <div>
-      <h1 style={{textAlign: 'center'}}>This is the full history of your expenses</h1>
+      <h1 className='headingering'>This is the full history of your expenses</h1>
       <br /><br />
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}

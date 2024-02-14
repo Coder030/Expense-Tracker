@@ -10,7 +10,7 @@ function Navbar() {
     <div className='navbar'>
       <ul>
         <li>
-        <Link to="/"><button className='butt'><IoHome className='home_icon'/></button></Link>
+        <Link to="/home"><button className='butt'><IoHome className='home_icon'/></button></Link>
         </li>
         <li>
         <br /><br />

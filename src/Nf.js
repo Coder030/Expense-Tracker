@@ -13,7 +13,7 @@ function Nf() {
       }
       >
         Not Found</h1>
-      <Link to="/" ><button className='button2'>To go back, press this button</button></Link>
+      <Link to="/home" ><button className='button2'>To go back, press this button</button></Link>
     </div>
   )
 }

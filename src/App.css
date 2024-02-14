@@ -3,8 +3,10 @@
 body{
   background-color: #f3efef;
   font-family: 'Nanum Gothic', sans-serif;
+  height: 100%;
+  width: 100%;
 }
-h2{
+.h{
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 700;
   position: relative;
@@ -243,10 +245,10 @@ h2{
   position: relative;
   height: 40px;
   width: 450px;
+  margin: 0 auto;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -254,15 +256,19 @@ h2{
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 .pPos{
   text-align: center;
   color: rgb(1, 195, 1);
+  position: relative;
+  bottom: 5px;
 }
 .pNeg{
   text-align: center;
   color: red;
+  position: relative;
+  bottom: 5px;
 }
 .linePos{
   position: absolute;
@@ -270,7 +276,7 @@ h2{
   right: 0;
   width: 5px;
   background-color: rgb(0, 225, 0);
-  height: 50px;
+  height: 60px;
 }
 .lineNeg{
   position: absolute;
@@ -278,10 +284,14 @@ h2{
   right: 0;
   width: 5px;
   background-color: red;
-  height: 50px;
+  height: 60px;
 }
 .profit{
+  text-align: center;
   color: rgb(1, 195, 1);
+  position: relative;
+  /* overflow-wrap: break-word; */
+
 }
 .butt{
   height: 40px;
@@ -315,4 +325,103 @@ ul{
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.centerFirstTwo {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.centerAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.nothing{
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.loss{  
+  text-align: center;
+  color: red;
+  overflow-wrap: break-word;
+}
+.headingering{
+  text-align: center;
+  margin: 0;
+  position: relative;
+  right: 4%;
+}
+.landing_heading{
+  text-align: center;
+}
+.lorem{
+  width: 580px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.image1{
+  height: 402.448979592px;
+  width: 290px;
+  padding-right: 10px;
+}
+.div_ain{
+  width: 590px;
+  margin: auto;
+  height: 100vh;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.image2{
+  height: 402.448979592px;
+  width: 290px;
+  padding-left: 10px;
+  float: right;
+  position: relative;
+  bottom: 405.5px;
+}
+.button_main1{
+  position: relative;
+  top: 20px;
+  margin: auto;
+  margin-top: 20px;
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: rgb(120, 42, 246);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  border:none;
+}
+.button_main2{
+  position: relative;
+  top: 30px;
+  margin: auto;
+  margin-top: 20px;
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(120, 42, 246);
+  color: white;
+  border:none;
+}
+.button_main1:hover, .button_main2:hover{
+  background-color: rgb(158, 104, 245);
+  cursor: pointer;
+} 
+.button-container{
+  width: 630px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 400px;
+  flex-direction: column;
+
 }

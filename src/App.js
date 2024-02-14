@@ -1,20 +1,26 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Main from './Main';
+import Home from './Home';
 import Nf from './Nf';
 import History from './History';
 import Navbar from './Navbar';
+import Main from './Main';
 
 function App() {
   return (
     <div className="App">
      <Router>
-      <Navbar/>
+      
       <Switch>
-        <Route exact path="/">
-            <Main/>
+      <Route exact path="/">
+            <Main />
+        </Route>
+        <Route exact path="/home">
+            <Navbar/>
+            <Home/>
         </Route>
         <Route exact path = "/history">
+          <Navbar/>
           <History/>
         </Route>
         <Route path="*">

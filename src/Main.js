@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { LuHistory } from "react-icons/lu";
 import { Link } from 'react-router-dom';
 
 function Main() {

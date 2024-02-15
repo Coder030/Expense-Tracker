@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useContext } from 'react';
+import { GlobalContext } from './global'; 
 
 async function fetchData() {
   const response = await fetch("https://expense-backend-o8m0.onrender.com/full");
@@ -9,6 +9,7 @@ async function fetchData() {
 
 function History() {
   const [data, setData] = useState([]);
+  const {dmode, setDmode} = useContext(GlobalContext)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [sum, setSum] = useState(0)
@@ -43,17 +44,17 @@ function History() {
 
 
   return (
-    <div>
-      <h1 className='headingering'>This is the full history of your expenses</h1>
+    <div className={`div1${dmode ? 'dark-mode' : ''}`}>
+      <h1 className={`headingering${dmode ? 'dark-mode' : ''}`}>This is the full history of your expenses</h1>
       <br /><br />
-      {loading && <p>Loading...</p>}
+      {loading && <p className={`load${dmode ? 'dark-mode' : ''}`}>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {Array.isArray(data) && data.length > 0 && (
         <div>
           {data.map((item, index) => {
             if(item.amount > 0){
               return (
-                <div className="histAmount">
+                <div className={`histAmount${dmode ? 'dark-mode' : ''}`}>
                   <p className="pPos" key={index}>The way of transaction is {item.way} and the amount is {item.amount}</p>
                   <div className='linePos'/>
                 </div>
@@ -61,7 +62,7 @@ function History() {
             }
             else{
               return (
-                <div className="histAmount">
+                <div className={`histAmount${dmode ? 'dark-mode' : ''}`}>
                   <p className="pNeg" key={index}>The way of transaction is {item.way} and the amount is {item.amount}</p>
                   <div className='lineNeg'/>
                 </div>
@@ -70,7 +71,7 @@ function History() {
           })}
         </div>
       )}
-      {data.length === 0 && !loading && <p style={{textAlign: 'center'}}>No transactions have taken place</p>}
+      {data.length === 0 && !loading && <p className={`not${dmode ? 'dark-mode' : ''}`} style={{textAlign: 'center'}}>No transactions have taken place</p>}
      {!loading && sum>0 && data.length!== 0 && <h2 className='profit'>The Profit is {sum}</h2> }
      {!loading && sum<0 && data.length!== 0 && <h2 className='loss'>The Loss is {sum}</h2> }
      {!loading && sum===0 && data.length!== 0 && <h2 className='nothing'>It is a break-even! Amount left is {sum}</h2> }

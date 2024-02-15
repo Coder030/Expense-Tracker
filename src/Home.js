@@ -1,26 +1,40 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useContext } from 'react'
+import { GlobalContext } from './global'; 
 
 function Main() {
   const [balance, setBalance] = useState(0.00)
   const [incomeS, setIncomeS] = useState(0.00)
   const [expenseS, setExpenseS] = useState(0.00)
+  const {dmode, setDmode} = useContext(GlobalContext)
+  useEffect(() => {
+    // Expose your context value globally
+    document.body.className = "body" + String(dmode);
+  }, [dmode]);
+
   const [av, setAv] = useState(null)
   const [ev, setEv] = useState(null)
   const [, setFlag] = useState(false)
   const [damn, setDamn] = useState([])
   function check() {
-    var input = document.getElementById("way")
-    const new2 = input.value;
-    var slicedStr = new2.slice(0, 27);
-    if (input.value.length >= 27){ 
-       alert("You have crossed the word limit ! ")
-       input.value = slicedStr
+    var input1 = document.getElementById("way")
+    var input2 = document.getElementById("incomeInp")
+    const new1 = input1.value;
+    var slicedStr1 = new1.slice(0, 27);
+    if (input1.value.length >= 27){ 
+       alert("You have crossed the word limit!")
+       input1.value = slicedStr1
+  }
+    const new2 = input2.value;
+    var slicedStr2 = new2.slice(0, 12);
+    if (input2.value.length >= 12){ 
+      alert("You have crossed the word limit!")
+      input2.value = slicedStr2
   }
 
-    if (new2.includes(1) || new2.includes(2 ) || new2.includes(3) || new2.includes(4) || new2.includes(5) || new2.includes(6) || new2.includes(7) || new2.includes(8) || new2.includes(9) || new2.includes(0)){
-      alert("You cannot have a number in your string !")
-      input.value = ""
+
+    if (new1.includes(1) || new1.includes(2 ) || new1.includes(3) || new1.includes(4) || new1.includes(5) || new1.includes(6) || new1.includes(7) || new1.includes(8) || new1.includes(9) || new1.includes(0)){
+      alert("You cannot have a number in your string!")
+      input1.value = new1.slice(0, -1)
     }
 }
 
@@ -98,31 +112,33 @@ function Main() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [incomeS, expenseS])
   return (
-    <div className='card'>
-      <h2 className='h'>Expense Tracker</h2>
-      <p className='yb'>YOUR BALANCE</p>
-      <p className='b'>₹ {parseFloat(balance)}</p>
-      <div className='ioe1'>
-          <p className='i'>INCOME</p>
+    <div className="card">
+
+      <h2 className={`h${dmode ? 'dark-mode' : ''}`}>Expense Tracker</h2>
+      <p className={`yb${dmode ? 'dark-mode' : ''}`}>YOUR BALANCE</p>
+      <p className={`b${dmode ? 'dark-mode' : ''}`}>₹ {parseFloat(balance)}</p>
+      <div className={`ioe1${dmode ? 'dark-mode' : ''}`}>
+          <p className={`i${dmode ? 'dark-mode' : ''}`}>INCOME</p>
           <p className='inc'>₹ {parseFloat(incomeS)}</p>
           <div class="vl"></div>
-      <div className='ioe2'>
-        <p className='e'>EXPENSE</p>
+      <div className={`ioe2${dmode ? 'dark-mode' : ''}`}>
+        {!dmode && <p className="e">EXPENSE</p>}
+        {dmode && <p className="edark-mode">EXPENSE</p>}
         <p className='exp'>₹ {parseFloat(expenseS)}</p>
       </div>
-      <p className='nt'>New Transaction</p>
+      <p className={`nt${dmode ? 'dark-mode' : ''}`}>New Transaction</p>
       <hr className="hr1" />
       <br />
-      <label className='labelfi' htmlFor="wayInp">Way of Transaction: </label>
+      <label className={`labelfi${dmode ? 'dark-mode' : ''}`} htmlFor="wayInp">Way of Transaction: </label>
       <br />
       <form>
-        <input  value={ev} placeholder='From where it came, or how it went  ?' type="text" className='wayInp' name="wayInp" onChange={(e) => setEv(e.target.value)} maxLength={35} id='way' onInput={check}/>
+        <input  value={ev} placeholder='From where it came, or how it went  ?' type="text" className={`wayInp${dmode ? 'dark-mode' : ''}`} name="wayInp" onChange={(e) => setEv(e.target.value)} maxLength={35} id='way' onInput={check}/>
         <br />
-        <label className='labelfi' htmlFor="incomeInp">Amount: </label>
+        <label className={`labelfi${dmode ? 'dark-mode' : ''}`} htmlFor="incomeInp">Amount: </label>
         <br />
-        <input value={av} placeholder='+ for income, - for expense' type="number" className='incomeInp' name="incomeInp" id='incomeInp' onChange={(e) => setAv(e.target.value)} />
+        <input value={av} placeholder='+ for income, - for expense' type="number" className={`incomeInp${dmode ? 'dark-mode' : ''}`} onInput={check} name="incomeInp" id='incomeInp' onChange={(e) => setAv(e.target.value)} />
         <p id='str'></p>
-        <button  onClick={handleClick} className='add' 
+        <button  onClick={handleClick} className={`add${dmode ? 'dark-mode' : ''}`}
         onKeyDown={(e) => {
           if (e.key === "Enter")
               handleClick();
@@ -130,7 +146,7 @@ function Main() {
         >Add new Transaction</button>
       </form>
       <br /><br />
-      <p className='nt'>Recent History</p>
+      <p className={`nt${dmode ? 'dark-mode' : ''}`}>Recent History</p>
       <hr className="hr1" />
       <div className='ways2I'></div>
       </div>

@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-body{
+.bodyfalse{
   background-color: #f3efef;
   font-family: 'Nanum Gothic', sans-serif;
   height: 100%;
   width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.App{
+  background-color: #f3efef;
+}
+.bodytrue{
+  background-color: rgb(12, 16, 16);
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 100%;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .h{
   font-family: 'Nanum Gothic', sans-serif;
@@ -12,9 +25,23 @@ body{
   position: relative;
   text-align: center;
   top: 35px;
+}.hdark-mode{
+  font-family: 'Nanum Gothic', sans-serif;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  top: 35px;
 }
 
 .card{
+  /* background-color: cyan; */
+  width: 560px;
+  height: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carddark-mdoe{
   /* background-color: cyan; */
   width: 560px;
   height: 730px;
@@ -29,6 +56,14 @@ body{
   font-size: 14px;
   font-weight: 800;
 }
+.ybdark-mode{
+  position: relative;
+  color: white;
+  left: 89px;
+  top: 60px;
+  font-size: 14px;
+  font-weight: 800;
+}
 
 .b{
   position: relative;
@@ -36,11 +71,25 @@ body{
   top: 50px;
   font-size: 25px;
   font-weight: 700;
-
 }
-
+.bdark-mode{
+  position: relative;
+  left: 89px;
+  color: white;
+  top: 50px;
+  font-size: 25px;
+  font-weight: 700;
+}
 .ioe1{
   background-color: white;
+  position: relative;
+  top: 40px;
+  left: 90px;
+  width: 192.5px;
+  height: 90px;
+}
+.ioe1dark-mode{
+  background-color: rgb(42, 42, 42);
   position: relative;
   top: 40px;
   left: 90px;
@@ -55,9 +104,25 @@ body{
   width: 192.5px;
   height: 90px;
 }
+.ioe2dark-mode{
+  background-color: rgb(42, 42, 42);
+  position: relative;
+  top: -123.8px;
+  left: 192.5px;
+  width: 192.5px;
+  height: 90px;
+}
 
 .i{
   position: relative;
+  left: 20px;
+  top: 19px;
+  font-weight: 800;
+  font-size: 17px;
+}
+.idark-mode{
+  position: relative;
+  color: white;
   left: 20px;
   top: 19px;
   font-weight: 800;
@@ -75,6 +140,14 @@ body{
 }
 .e{
   position: relative;
+  left: 15px;
+  top: 17px;
+  font-weight: 800;
+  font-size: 17px;
+}
+.edark-mode{
+  position: relative;
+  color: white;
   left: 15px;
   top: 17px;
   font-weight: 800;
@@ -102,13 +175,15 @@ body{
 .nt{
   position: relative;
   bottom: 100px;
-}s
-
-
-
-.nt{
   font-weight: 700;
 }
+.ntdark-mode{
+  position: relative;
+  color: white;
+  bottom: 100px;
+  font-weight: 700;
+}
+
 .hr1{
   position: relative;
   bottom: 110px;
@@ -126,6 +201,21 @@ body{
   font-family: 'Nanum Gothic', sans-serif;
   border: 1px solid #e6e4e4;
 }
+.incomeInpdark-mode{
+  position: relative;
+  bottom: 110px;
+  text-indent: 8px;
+  margin-top: 10px;
+  height: 32px;
+  width: 385px;
+  font-family: 'Nanum Gothic', sans-serif;
+  border: 1px solid #e6e4e4;
+  background-color: rgb(42, 42, 42);
+  color: white;
+}
+.incomeInpdark-mode::placeholder{
+  color: rgb(220, 215, 215);
+}
 
 .wayInp{
   position: relative;
@@ -139,8 +229,30 @@ body{
   margin-bottom: 15px;
 }
 
+.wayInpdark-mode{
+  position: relative;
+  bottom: 110px;
+  text-indent: 8px;
+  margin-top: 10px;
+  height: 32px;
+  width: 385px;
+  font-family: 'Nanum Gothic', sans-serif;
+  border: 1px solid #e6e4e4;
+  margin-bottom: 15px;
+  background-color: rgb(42, 42, 42);
+  color: white;
+}
+.wayInpdark-mode::placeholder{
+  color: rgb(220, 215, 215);
+}
 .labelfi{
   position: relative;
+  bottom: 110px;
+  font-weight: 700;
+}
+.labelfidark-mode{
+  position: relative;
+  color: white;
   bottom: 110px;
   font-weight: 700;
 }
@@ -156,10 +268,26 @@ body{
   font-family: 'Courier New', Courier, monospace;
   transition: width 1s, height .3s;
 }
+.adddark-mode{
+  position: relative;
+  bottom: 90px;
+  height: 32px;
+  width: 392px;
+  background-color:  rgb(135, 213, 9);
+  color: black;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  transition: width 1s, height .3s;
+}
 
 .add:hover{
   height: 40px;
   background-color: rgb(149, 92, 241);
+
+}
+.adddark-mode:hover{
+  height: 40px;
+  background-color: rgb(160, 215, 72);
 
 }
 
@@ -258,6 +386,23 @@ body{
   padding-top: 5px;
   padding-bottom: 15px;
 }
+.histAmountdark-mode{
+  position: relative;
+  height: 40px;
+  width: 450px;
+  margin: 0 auto;
+  background-color: rgb(42, 42, 42);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
 .pPos{
   text-align: center;
   color: rgb(1, 195, 1);
@@ -299,6 +444,13 @@ body{
   border: none;
   border-radius: 5px;
 }
+.buttdark-mode{
+  background-color: black;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 5px;
+}
 .navbar{
   position: relative;
   width: 40px;
@@ -314,12 +466,36 @@ body{
   padding-right: 25px;
   padding-top: 35px;
   padding-bottom: 35px;
+  z-index: 1;
 } 
+.navbardark-mode{
+  position: relative;
+  width: 40px;
+  background-color: rgb(130, 129, 129);
+  float: left;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  z-index: 1;
+}
 .home_icon{
   color: rgb(21, 78, 248);
 }
+.home_icondark-mode{
+  color: rgb(234, 177, 7);
+}
 .history_icon{
   color: rgb(21, 78, 248);
+}
+.history_icondark-mode{
+  color: rgb(234, 177, 7);
 }
 ul{
   margin: 0;
@@ -348,6 +524,13 @@ ul{
 }
 .headingering{
   text-align: center;
+  margin: 0;
+  position: relative;
+  right: 4%;
+}
+.headingeringdark-mode{
+  text-align: center;
+  color: white;
   margin: 0;
   position: relative;
   right: 4%;
@@ -424,4 +607,46 @@ ul{
   bottom: 400px;
   flex-direction: column;
 
+}
+.button{
+  background-color: rgb(235, 235, 235);
+  color: rgb(21, 78, 248);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.buttondark-mode{
+  background-color: rgb(20, 20, 20);
+  color: rgb(234, 177, 7);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.div1{
+  background-color: #f3efef;
+  height: 1000000000000000000vh;
+  position: relative;
+  padding-top: 30px;
+  bottom: 10px;
+  
+}
+
+.div1dark-mode{
+  background-color: black;
+  height: 1000000000000000000vh;
+  position: relative;
+  padding-top: 30px;
+  bottom: 10px;
+}
+.notdark-mode{
+  color: white;
+}
+.loaddark-mode{
+  color: white;
+}
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
 }

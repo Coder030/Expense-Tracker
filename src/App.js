@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useContext } from 'react';
+import { GlobalContext } from './global'; 
 import './App.css';
 import Home from './Home';
 import Nf from './Nf';
@@ -7,8 +9,9 @@ import Navbar from './Navbar';
 import Main from './Main';
 
 function App() {
+  const {dmode, setDmode} = useContext(GlobalContext)
   return (
-    <div className="App">
+    <div className={`App${dmode ? 'dark-mode' : ''}`}>
      <Router>
       
       <Switch>

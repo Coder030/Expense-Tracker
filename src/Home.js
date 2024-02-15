@@ -12,8 +12,8 @@ function Main() {
   function check() {
     var input = document.getElementById("way")
     const new2 = input.value;
-    var slicedStr = new2.slice(0, 35);
-    if (input.value.length >= 35){   // 5 is your maxlength
+    var slicedStr = new2.slice(0, 27);
+    if (input.value.length >= 27){ 
        alert("You have crossed the word limit ! ")
        input.value = slicedStr
   }
